@@ -1,0 +1,37 @@
+<html>
+<body id="body" style="background:yellow;">
+  <h2 id="h2"></h2>
+  <input type="button" value="click" id="button" onclick="color()">
+  <style>
+    #h2{
+  text-align:center;
+  background:black;
+  color:white;
+}
+body{
+  position:absolute;
+  top:25%;
+  left:25%;
+}
+#button{
+  position:absolute;
+  left:25%;
+  height:30px;
+  width:100px;
+  font-weight:bolder;
+}
+  </style>
+  <script>
+    let button=document.getElementById("button");
+let bodyColor=document.getElementById("body");
+let h2=document.getElementById("h2");
+
+let colors=[ "green","fuchsia", "red", "maroon", "white", "gray", "silver", "yellow"]
+
+function color(){
+  let i=(Math.floor(Math.random() * 8));
+  bodyColor.style.background=colors[i];
+  h2.innerHTML="BG color: "+colors[i];
+}
+  </script>
+</html>
